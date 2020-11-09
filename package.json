@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm run prettier -- -l && jest",
     "prettier": "git ls-files | grep -E '\\.(js|jsx|ts|tsx|md|json)$' | xargs prettier",
-    "prettier:fix": "npm run prettier -- --write ."
+    "prettier:fix": "npm run prettier -- --write .",
+    "prepublish": "npm run test"
   },
   "repository": {
     "url": "https://github.com/novavovikov/deprecation-loader"
