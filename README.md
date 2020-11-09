@@ -1,5 +1,6 @@
 [![npm][npm]][npm-url]
 [![node][node]][node-url]
+[![size][size]][size-url]
 [![tests][tests]][tests-url]
 
 # deprecated-loader
@@ -100,5 +101,7 @@ module.exports = {
 [npm-url]: https://npmjs.com/package/deprecated-loader
 [node]: https://img.shields.io/node/v/file-loader.svg
 [node-url]: https://nodejs.org
-[tests]: https://img.shields.io/badge/deprecated--loader-tests-green
+[size]: https://img.shields.io/github/languages/code-size/novavovikov/deprecated-loader
+[size-url]: https://github.com/novavovikov/deprecated-loader/tree/master/lib
+[tests]: https://img.shields.io/github/workflow/status/novavovikov/deprecated-loader/test?label=tests
 [tests-url]: https://github.com/novavovikov/deprecated-loader/actions?query=workflow%3Atest
