@@ -4,10 +4,15 @@ const deprecatedRegExp = new RegExp('@deprecated')
 
 /**
  * @param {String} comment
+ * @param {String | null} appVersion
  * @return {Boolean}
  */
-exports.validateComment = function (comment) {
+exports.validateComment = function (comment, appVersion) {
   const isDeprecated = deprecatedRegExp.test(comment)
 
-  return isDeprecated && validateVersion(comment)
+  if (appVersion) {
+    return isDeprecated && validateVersion(comment, appVersion)
+  }
+
+  return isDeprecated
 }

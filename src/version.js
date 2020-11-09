@@ -1,26 +1,21 @@
 const compareVersions = require('compare-versions')
-const pkg = require('../package')
-
-const isValidPackageVersion = compareVersions.validate(pkg.version)
 
 // used global flag for multiple versions per line
 const versionRegExp = new RegExp(/\[(.*?)\]/g)
 
 /**
+ * Compares app version and code version
  * @param {String} comment
+ * @param {String} appVersion
  * @return {Boolean}
  */
-exports.validateVersion = function (comment) {
-  if (!isValidPackageVersion) {
-    return false
-  }
-
+exports.validateVersion = function (comment, appVersion) {
   const versions = comment.match(versionRegExp) ?? []
 
   return versions.some((version) => {
-    const v = version.replace(/[\[\]']+/g, '')
-    const isValid = compareVersions.validate(v)
+    const codeVersion = version.replace(/[\[\]']+/g, '')
+    const isValid = compareVersions.validate(codeVersion)
 
-    return isValid && compareVersions.compare(pkg.version, v, '>=')
+    return isValid && compareVersions.compare(appVersion, codeVersion, '>=')
   })
 }

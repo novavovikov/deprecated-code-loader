@@ -3,10 +3,7 @@
   "properties": {
     "notify": {
       "description": "Deprecation notification",
-      "enum": [
-        "warning",
-        "error"
-      ]
+      "enum": ["warning", "error"]
     }
   },
   "additionalProperties": false

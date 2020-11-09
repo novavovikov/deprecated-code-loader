@@ -1,10 +1,12 @@
 {
   "name": "deprecation-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Loader notifies deprecated code",
   "main": "src/index.js",
   "scripts": {
-    "start": "rm -rf dist && webpack"
+    "start": "rm -rf dist && webpack",
+    "prettier": "git ls-files | grep -E '\\.(js|jsx|ts|tsx|md|json)$' | xargs prettier",
+    "prettier:fix": "npm run prettier -- --write ."
   },
   "repository": {
     "url": "https://github.com/novavovikov/deprecation-loader"
