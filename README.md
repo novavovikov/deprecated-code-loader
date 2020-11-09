@@ -108,6 +108,6 @@ module.exports = {
 [node]: https://img.shields.io/node/v/file-loader.svg
 [node-url]: https://nodejs.org
 [tests]: https://img.shields.io/badge/deprecated--loader-tests-green
-[tests-url]: https://github.com/novavovikov/deprecation-loader/actions
+[tests-url]: https://github.com/novavovikov/deprecation-loader/actions?query=workflow%3Atest
 [chat]: https://img.shields.io/badge/gitter-webpack%2Fwebpack-brightgreen.svg
 [chat-url]: https://gitter.im/webpack/webpack
