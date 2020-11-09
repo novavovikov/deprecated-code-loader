@@ -1,5 +1,5 @@
 {
-  "name": "deprecation-loader",
+  "name": "deprecated-loader",
   "version": "0.0.3",
   "description": "Loader notifies deprecated code",
   "main": "lib/index.js",
@@ -7,10 +7,10 @@
     "test": "npm run prettier -- -l && jest",
     "prettier": "git ls-files | grep -E '\\.(js|jsx|ts|tsx|md|json)$' | xargs prettier",
     "prettier:fix": "npm run prettier -- --write .",
-    "prepublish": "npm run test"
+    "prepublishOnly": "npm run test"
   },
   "repository": {
-    "url": "https://github.com/novavovikov/deprecation-loader"
+    "url": "https://github.com/novavovikov/deprecated-loader"
   },
   "keywords": [
     "webpack",

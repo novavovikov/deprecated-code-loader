@@ -1,13 +1,6 @@
-<div align="center">
-  <a href="https://github.com/webpack/webpack">
-    <img width="200" height="200" src="https://webpack.js.org/assets/icon-square-big.svg">
-  </a>
-</div>
-
 [![npm][npm]][npm-url]
 [![node][node]][node-url]
 [![tests][tests]][tests-url]
-[![chat][chat]][chat-url]
 
 # deprecated-loader
 
@@ -64,7 +57,7 @@ Module Warning (from ./file.js):
 
 ----------------
 line: 13
-text: @deprecated [0.0.0]
+text: @deprecated [2.0.0]
 ----------------
 
 ```
@@ -104,10 +97,8 @@ module.exports = {
 [MIT](./LICENSE)
 
 [npm]: https://img.shields.io/npm/v/file-loader.svg
-[npm-url]: https://npmjs.com/package/deprecation-loader
+[npm-url]: https://npmjs.com/package/deprecated-loader
 [node]: https://img.shields.io/node/v/file-loader.svg
 [node-url]: https://nodejs.org
 [tests]: https://img.shields.io/badge/deprecated--loader-tests-green
-[tests-url]: https://github.com/novavovikov/deprecation-loader/actions?query=workflow%3Atest
-[chat]: https://img.shields.io/badge/gitter-webpack%2Fwebpack-brightgreen.svg
-[chat-url]: https://gitter.im/webpack/webpack
+[tests-url]: https://github.com/novavovikov/deprecated-loader/actions?query=workflow%3Atest
