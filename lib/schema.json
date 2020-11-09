@@ -1,9 +1,9 @@
 {
   "type": "object",
   "properties": {
-    "notify": {
+    "notification": {
       "description": "Deprecation notification",
-      "enum": ["warning", "error"]
+      "enum": ["warning", "error", "none"]
     }
   },
   "additionalProperties": false

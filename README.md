@@ -63,7 +63,7 @@ WARNING in ./file.js
 Module Warning (from ./file.js):
 
 ----------------
-line: 13;
+line: 13
 text: @deprecated [0.0.0]
 ----------------
 
@@ -71,14 +71,11 @@ text: @deprecated [0.0.0]
 
 ## Options
 
-### `notify`
+### `notification`
 
-Enum: `warning|error`
-Default: `'warning'`
+Enum: `warning|error|none` - default: `'warning'`
 
-Deprecated Code Notification Type
-
-#### `String`
+Deprecated code notification type
 
 **webpack.config.js**
 
@@ -92,7 +89,7 @@ module.exports = {
           {
             loader: 'deprecated-loader',
             options: {
-              notify: 'error'
+              notification: 'error'
             }
           }
         ]
