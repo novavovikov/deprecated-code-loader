@@ -2,7 +2,7 @@ const path = require('path')
 const compareVersions = require('compare-versions')
 const loaderUtils = require('loader-utils')
 const schemaUtils = require('schema-utils')
-const babelParser = require('@babel/parser')
+const commentParser = require('comment-parser')
 const { getErrorText } = require('./error')
 const { validateComment } = require('./comment')
 
@@ -29,17 +29,18 @@ module.exports = function (sourceCode) {
     baseDataPath: 'options'
   })
 
-  const ast = babelParser.parse(sourceCode)
+  const commentList = commentParser(sourceCode)
   const pkg = require(path.join(this.rootContext, 'package'))
   const appVersion = compareVersions.validate(pkg.version) ? pkg.version : null
 
-  for (const commentData of ast.comments) {
-    const { value: comment } = commentData
-    const isDeprecated = validateComment(comment, appVersion)
+  for (const { tags } of commentList) {
+    for (const comment of tags) {
+      const isDeprecated = validateComment(comment, appVersion)
 
-    if (isDeprecated) {
-      const errorText = getErrorText(commentData)
-      errorHandler(new Error(errorText))
+      if (isDeprecated) {
+        const errorText = getErrorText(comment)
+        errorHandler(new Error(errorText))
+      }
     }
   }
 

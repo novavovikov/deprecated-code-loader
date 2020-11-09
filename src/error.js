@@ -1,16 +1,10 @@
 /**
- * @param {ESTree.Comment} comment
+ * @param {Tag} comment
  */
-exports.getErrorText = function ({ loc, value }) {
-  const { line, column } = loc.start
-
+exports.getErrorText = function ({ line, source }) {
   return `
-------- position --------
-
-line ${line}; column: ${column};
-
--------- comment --------
-
-${value}
-`
+----------------
+line: ${line};
+text: ${source}
+----------------`
 }

@@ -62,14 +62,11 @@ you will see comments in the terminal:
 WARNING in ./file.js
 Module Warning (from ./file.js):
 
-------- position --------
+----------------
+line: 13;
+text: @deprecated [0.0.0]
+----------------
 
-line 1; column: 0;
-
--------- comment --------
-
-*
- * @deprecated [2.0.0]
 ```
 
 ## Options

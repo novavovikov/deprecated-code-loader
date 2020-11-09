@@ -1,17 +1,15 @@
 const { validateVersion } = require('./version')
 
-const deprecatedRegExp = new RegExp('@deprecated')
-
 /**
- * @param {String} comment
+ * @param {Tag} comment
  * @param {String | null} appVersion
  * @return {Boolean}
  */
 exports.validateComment = function (comment, appVersion) {
-  const isDeprecated = deprecatedRegExp.test(comment)
+  const isDeprecated = comment.tag === 'deprecated'
 
   if (appVersion) {
-    return isDeprecated && validateVersion(comment, appVersion)
+    return isDeprecated && validateVersion(comment.source, appVersion)
   }
 
   return isDeprecated
