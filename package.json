@@ -1,7 +1,7 @@
 {
-  "name": "deprecated-loader",
-  "version": "0.0.4",
-  "description": "Loader notifies deprecated code",
+  "name": "deprecated-code-loader",
+  "version": "1.0.0",
+  "description": "Loader for webpack. This loader notifies about deprecated code",
   "main": "lib/index.js",
   "scripts": {
     "test": "npm run prettier -- -l && jest",
